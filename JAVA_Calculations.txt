@@ -1,0 +1,57 @@
+package geekbrains.lesson_2;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	System.out.println("Please enter number of operation");
+	System.out.println("1. Sum");
+	System.out.println("2. Substraction");
+	System.out.println("3. Multiplication");
+	System.out.println("4. Division");
+	Scanner scanner = new Scanner (System.in);
+    int operation = scanner.nextInt();
+    System.out.println("Your choice is  " + operation);
+    int result;
+    if (operation==1)
+    {
+        System.out.println("Please enter the first summand  ");
+        int a = scanner.nextInt();
+        System.out.println("Please enter the second summand  ");
+        int b = scanner.nextInt();
+        result = a+b;
+        System.out.println("The result is   " + result);
+    } else if (operation==2)
+    {
+        System.out.println("Please enter the first number(minuend)  ");
+        int a = scanner.nextInt();
+        System.out.println("Please enter the second number(substrahend)  ");
+        int b = scanner.nextInt();
+        result = a-b;
+        System.out.println("The result is   " + result);
+    } else if (operation==3)
+    {
+        System.out.println("Please enter the multiplier  ");
+        int a = scanner.nextInt();
+        System.out.println("Please enter the multiplicand  ");
+        int b = scanner.nextInt();
+        result = a*b;
+        System.out.println("The result is   " + result);
+    } else if (operation==4)
+    {
+        System.out.println("Please enter the divident  ");
+        int a = scanner.nextInt();
+        System.out.println("Please enter the divisor  ");
+        int b = scanner.nextInt();
+        if (b==0)
+        {
+            System.out.println("Divisor can not be 0");
+        }else
+        {
+            result = a / b;
+            System.out.println("The result is   " + result);
+        }
+    }
+    }
+}
